@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PartOne {
     public int calculate() {
-        File file = new File("aoc1input.txt");
+        File file = new File("java/day01/aoc1input.txt");
         int sum = 0;
         StringBuilder word = new StringBuilder();
 

@@ -6,7 +6,7 @@ public class PartTwo {
 
     // TODO: just make it work
     public int calculate() {
-        File file = new File("aoc1input.txt");
+        File file = new File("java/day01/aoc1input.txt");
         int sum = 0;
         int counter = 0;
         StringBuilder word = new StringBuilder();
@@ -16,7 +16,6 @@ public class PartTwo {
             while (readVal != -1) {
                 word.append((char) readVal);
                 if (readVal == 10) {
-                    System.out.println(counter++);
                     for (int i = 0; i < word.toString().length(); i++) {
 
                         if (word.substring(0, i).contains("one")) {
@@ -57,13 +56,9 @@ public class PartTwo {
 
                     }
 
-                    System.out.print(word+ " ");
-
                     for (int i = 0; i < word.toString().length(); i++) {
                         if (word.charAt(i) >= 48 && word.charAt(i) <= 57) {
-                            System.out.print("sum: " + sum + "plus " + (word.charAt(i) - '0') * 10 + " is: ");
                             sum = sum + ((word.charAt(i) - '0') * 10);
-                            System.out.print(sum);
 
                             break;
                         }
@@ -73,15 +68,12 @@ public class PartTwo {
 
                     for (int i = 0; i < word.toString().length(); i++) {
                         if (word.charAt(i) >= 48 && word.charAt(i) <= 57) {
-                            System.out.print("sum: " + sum + "plus " + (word.charAt(i) - '0') + " is: ");
                             sum = sum + (word.charAt(i) - '0');
-                            System.out.print(sum);
 
                             break;
                         }
                     }
 
-                    System.out.println('\n');
                     word.replace(0, word.toString().length(), "");
                 }
                 readVal = fis.read();
